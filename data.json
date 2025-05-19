@@ -1,0 +1,184 @@
+[
+  {
+    "group": "hotel",
+    "coreMetricQpsConfig": {
+      "docIds": {
+        "2025-04-17": "Sk2udbFH3oPwX8xxjCFc6M0Xnnf",
+        "docId": "KiWcdbKk0ouUfqxzKsycUOPvnuf"
+      },
+      "metrics": [
+        {
+          "name": "主流程-L页-QPS",
+          "watcherKey": "s.dzs.h_venus.nq.qrt_process_all_QueryHotelListNew_APP_Normal_fca_h_hlist_Count"
+        },
+        {
+          "name": "主流程-L页-搜索排序",
+          "watcherKey": "s.dzs.m_hotelrank_search.cb.HotelMobileAPI_MIN_1"
+        },
+        {
+          "name": "主流程-D页-详情",
+          "watcherKey": "s.dzs.h_venus.nq.qrt_process_all_QueryHotelDetailCompleteGraphQL_APP_Normal_fca_h_hdetail_Count"
+        },
+        {
+          "name": "主流程-D页-预加载报价",
+          "watcherKey": "s.dzs.h_venus.nq.qrt_process_all_QueryHotelUnionFastPrice_APP_Normal_fca_h_hdetail_fastprice_Count"
+        },
+        {
+          "name": "主流程-D页-报价全量",
+          "watcherKey": "s.dzs.h_venus.nq.qrt_process_all_QueryHotelUnionDetailPrice_APP_Normal_fca_h_hdetailprice_Count"
+        },
+        {
+          "name": "主流程-B页",
+          "watcherKey": "s.dzs.h_booking_app.nq.__watcher__http_process-timer_hbooking_booking_Count"
+        },
+        {
+          "name": "主流程-提交订单",
+          "watcherKey": "s.dzs.h_booking_app.nq.__watcher__http_process-timer_hbooking_submit_Count"
+        },
+        {
+          "name": "主流程-订单详情",
+          "watcherKey": "s.dzs.h_booking_app.nq.__watcher__http_process-timer_hbooking_orderDetail_Count"
+        },
+        {
+          "name": "主流程变价率",
+          "watcherKey": "alias(asPercent(s.dzs.h_booking_misc.nq.priceChange_main_presubmit_change_true_diff_payPrice_change_Count, alias(s.dzs.h_booking_app.nq.__watcher__http_process-timer_hbooking_booking_Count,'进订总量')), '进订变价率')"
+        },
+        {
+          "name": "辅营售前",
+          "watcherKey": "alias(s.dzs.h_sargeras.nq.SELF_MONITOR_RPC_IProductBookingService_hotelBooking_Provider_Count, 'hotelBooking')"
+        },
+        {
+          "name": "短信QPS(平均发送)",
+          "watcherKey": "s.hotel.hotel_qta_order_notify_provider.hotel_qta_order_notify_provider_sms_notify_success_Count"
+        },
+        {
+          "name": "产品力-Q物理房型满房率",
+          "watcherKey": "alias(asPercent(s.dzs.h_datacube_wrapper.nq.OCCUPANCY_RATE_ROOM_TYPE_FULL_qc_sa_T0_T2_qunar_Count, s.dzs.h_datacube_wrapper.nq.OCCUPANCY_RATE_ROOM_TYPE_TOTAL_qc_sa_T0_T2_qunar_Count), 'SA-Qunar物理房型满房率')"
+        },
+        {
+          "name": "产品力-C物理房型满房率",
+          "watcherKey": "alias(asPercent(s.dzs.h_datacube_wrapper.nq.OCCUPANCY_RATE_ROOM_TYPE_FULL_qc_sa_T0_T2_ctrip_Count, s.dzs.h_datacube_wrapper.nq.OCCUPANCY_RATE_ROOM_TYPE_TOTAL_qc_sa_T0_T2_ctrip_Count), 'SA-Ctrip物理房型满房率')"
+        },
+        {
+          "name": "交易生单QPS",
+          "watcherKey": "s.dzs.h_qta_parent_order.nq.__watcher__create_order_success_Count"
+        },
+        {
+          "name": "交易支付QPS",
+          "watcherKey": "alias(sumSeries(s.dzs.h_qta_parent_order.nq.__watcher__PAY_CASHIER_*_success_Count),'酒店单支付QPS')"
+        },
+        {
+          "name": "交易订单读QPS",
+          "watcherKey": "alias(sumSeries(s.hotel.hotel_qta_order_store_provider.hotel_qta_order_store_provider_oss_exe_OrderStoreReadService_*_Count),'读操作QPS')"
+        },
+        {
+          "name": "交易订单写QPS",
+          "watcherKey": "alias(sumSeries(s.hotel.hotel_qta_order_store_provider.hotel_qta_order_store_provider_oss_exe_OrderStoreWriteService_*_Count),'写操作QPS')"
+        },
+        {
+          "name": "SOA下单-非标",
+          "watcherKey": "s.dzs.h_supplier_orderAdapter.nq.SAVE_ORDER_SUCCESS_Count"
+        },
+        {
+          "name": "SOA下单-norm",
+          "watcherKey": "s.dzs.h_supplier_orderAdapter.nq.NORM_CREATE_ORDER_SUCCESS_NOTIFY_Count"
+        },
+        {
+          "name": "SPA-wrapper报价QPS",
+          "watcherKey": "s.dzs.h_spa.nq.biz_price_query_qps_wrapper_Count"
+        },
+        {
+          "name": "SPA-order报价QPS",
+          "watcherKey": "s.dzs.h_spa.nq.biz_price_query_qps_order_Count"
+        },
+        {
+          "name": "报价列表QPS",
+          "watcherKey": "s.dzs.h_hs_sirius.nq.http_galaxy_nprice_listPriceAPI_jsp_success_Count"
+        },
+        {
+          "name": "报价详情页QPS",
+          "watcherKey": "s.dzs.h_hs_sirius.nq.http_galaxy_nprice_detail_jsp_success_Count"
+        },
+        {
+          "name": "离线抓取QPS",
+          "watcherKey": "s.hotel.h_travelco.h_travelco_wrapper_all_topic_Detail_message_Count"
+        },
+        {
+          "name": "促销平台券（列表+报价）",
+          "watcherKey": "seriesByTag('metric_name=s.dzs.h_qta_prmt.kn.REVERSE.DUBBO.TwellBenefitRemote_query_1.TIMER', 'type=MIN_1')"
+        },
+        {
+          "name": "促销商促-列表",
+          "watcherKey": "s.dzs.h_prmt_supplier_core.nq.dubbo_provider_BusinessPromotionService_getPromotionForRender_1_all_Count"
+        },
+        {
+          "name": "促销商促-报价",
+          "watcherKey": "s.dzs.h_prmt_supplier_core.nq.dubbo_provider_BusinessPromotionService_getPromotionForPrice_1_all_Count"
+        },
+        {
+          "name": "促销平台促-列表",
+          "watcherKey": "s.dzs.h_prmt_supplier_core.nq.dubbo_provider_SmartSalePromotionService_getPromotionForRender_1_all_Count"
+        },
+        {
+          "name": "促销平台促-报价",
+          "watcherKey": "s.dzs.h_prmt_supplier_core.nq.dubbo_provider_SmartSalePromotionService_getPromotionForPrice_1_all_Count"
+        },
+        {
+          "name": "关键词sug",
+          "watcherKey": "sumSeries(seriesByTag('metric_name=s.hotel.h_xsearch.h_xsearch_sug_all_Count'), s.hotel.h_xsearch.h_xsearch_CtripSug_all_Count)"
+        },
+        {
+          "name": "关键词搜索",
+          "watcherKey": "s.dzs.h_xsearch.nq.inland_search_Count"
+        },
+        {
+          "name": "APP-H页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_home_wholePage_viewHome_show_*_Count), 'APP-H页曝光')"
+        },
+        {
+          "name": "APP-L页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_hotelMonitor_perfAndFlow_HotelListNew*_ios_Count, s.flight.f_log_dashboard.nq.qav_event_hotel_hotelMonitor_perfAndFlow_HotelListNew*_adr_Count), 'APP-L页曝光')"
+        },
+        {
+          "name": "APP-D页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_detail_others_detailShow_monitor_h_home_rn_*_Count), 'APP-D页曝光')"
+        },
+        {
+          "name": "APP-B页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_HOrderFillVCNew_experience_1_show_hotel_rn_ios_ios_Count, s.flight.f_log_dashboard.nq.qav_event_hotel_HOrderFillVCNew_experience_1_show_hotel_rn_android_adr_Count), ' APP-B页曝光')"
+        },
+        {
+          "name": "APP-O页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_hotelOrderDetail_experience_2_monitor_hotel_rn_ios_ios_Count, s.flight.f_log_dashboard.nq.qav_event_hotel_hotelOrderDetail_experience_2_monitor_hotel_rn_android_adr_Count), 'APP-O页曝光')"
+        },
+        {
+          "name": "Mini-H页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_hotel_index_hotel_search_1_show_nnc_module_qunar_hotel_mina_wechat_Count, s.flight.f_log_dashboard.nq.qav_event_hotel_hotelIndex_experience_1_show_nnc_module_qunar_hotel_mina_ali_Count), 'Mini-H页曝光')"
+        },
+        {
+          "name": "Mini-L页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_hotelListWx_experience_1_show_nnc_module_qunar_hotel_mina_ali_*Count, s.flight.f_log_dashboard.nq.qav_event_hotel_hotelListWx_experience_1_show_nnc_module_qunar_hotel_mina_wechat_*Count,s.flight.f_log_dashboard.nq.qav_event_hotel_hotelListWx_taroV4_experience_1_show_nnc_module_qunar_hotel_mina_wechat_Count), 'Mini-L页曝光')"
+        },
+        {
+          "name": "Mini-D页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_hotelDetailWx_experience_1_show_nnc_module_qunar_hotel_mina_wechat_*Count,s.flight.f_log_dashboard.nq.qav_event_hotel_hotelDetailWx_taroV4_experience_1_show_nnc_module_qunar_hotel_mina_wechat_Count), 'Mini-D页曝光')"
+        },
+        {
+          "name": "Mini-B页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_hotelOrderInfoWx_*experience_1_show_nnc_module_qunar_hotel_mina_wechat_Count), 'Mini-B页曝光')"
+        },
+        {
+          "name": "Mini-O页曝光",
+          "watcherKey": "alias(sumSeries(s.flight.f_log_dashboard.nq.qav_event_hotel_hotelOrderDetailWx_experience_1_show_nnc_module_qunar_hotel_mina_ali_Count, s.flight.f_log_dashboard.nq.qav_event_hotel_hotelOrderDetailWx_*experience_1_show_nnc_module_qunar_hotel_mina_wechat_Count), 'Mini-O页曝光')"
+        }
+      ]
+    },
+    "summarizeDoc": {
+      "targetDocId": "DofbdXRPhoAsiXxPgGucO0P0nKh",
+      "originDataDocIds": [
+        "LqMRdUs8botuKTxlNQYcXo5jnSh",
+        "PY8JdKOsMo5vczxPc3LcG627nLh"
+      ]
+    }
+  }
+]

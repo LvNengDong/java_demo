@@ -7,10 +7,10 @@ package com.example._55;
  */
 public class Solution {
     public static void main(String[] args) {
-        boolean b = new Solution().canJump();
-        System.out.println(b);
+        //boolean b = new Solution().canJump();
+        //System.out.println(b);
     }
-    public boolean canJump(int[] nums) {
-
-    }
+    //public boolean canJump(int[] nums) {
+    //
+    //}
 }
