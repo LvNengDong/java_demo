@@ -1,6 +1,6 @@
-package _26.dynamicProxy.demo02;
+package _26.dynamicProxy.dynamic_proxy.cglib;
 
-import _26.dynamicProxy.static_proxy.UserController;
+import _26.dynamicProxy.static_proxy.byInterface.UserController;
 import net.sf.cglib.proxy.Enhancer;
 
 /**

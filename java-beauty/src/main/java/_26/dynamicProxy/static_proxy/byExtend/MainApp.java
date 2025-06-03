@@ -1,4 +1,6 @@
-package _26.dynamicProxy.static_proxy;
+package _26.dynamicProxy.static_proxy.byExtend;
+
+import _26.dynamicProxy.static_proxy.byInterface.IUserController;
 
 /**
  * @Author lnd
@@ -8,9 +10,9 @@ package _26.dynamicProxy.static_proxy;
 public class MainApp {
     public static void main(String[] args) {
         // 原来的代码
-        //IUserController userController = new UserController();
+        //UserController userController = new UserController();
         // 代理之后的代码
-        IUserController userController = new UserControllerProxy(new UserController());
+        UserController userController = new UserControllerProxy();
         userController.login("18818888888", "123456");
         userController.register("18818888888", "123456");
     }

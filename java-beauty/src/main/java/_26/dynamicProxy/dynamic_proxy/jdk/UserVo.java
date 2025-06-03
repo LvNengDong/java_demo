@@ -1,4 +1,4 @@
-package _26.dynamicProxy.demo01;
+package _26.dynamicProxy.dynamic_proxy.jdk;
 
 /**
  * @Author lnd

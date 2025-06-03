@@ -1,6 +1,6 @@
-package _26.dynamicProxy.static_proxy;
+package _26.dynamicProxy.static_proxy.byInterface;
 
-import _26.dynamicProxy.demo01.UserVo;
+import _26.dynamicProxy.dynamic_proxy.jdk.UserVo;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
  * @Date 2025/5/19 10:57
  */
 @Slf4j
-public class UserControllerProxy implements IUserController{
+public class UserControllerProxy implements IUserController {
 
     private UserController userController;
 

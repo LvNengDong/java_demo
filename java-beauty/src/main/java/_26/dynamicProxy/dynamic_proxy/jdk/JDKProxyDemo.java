@@ -1,7 +1,7 @@
-package _26.dynamicProxy.demo01;
+package _26.dynamicProxy.dynamic_proxy.jdk;
 
-import _26.dynamicProxy.static_proxy.IUserController;
-import _26.dynamicProxy.static_proxy.UserController;
+import _26.dynamicProxy.static_proxy.byInterface.IUserController;
+import _26.dynamicProxy.static_proxy.byInterface.UserController;
 
 import java.lang.reflect.Proxy;
 
